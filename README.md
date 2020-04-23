@@ -32,7 +32,7 @@ You will create a bank account applcation that will let you create bank accounts
   - `AppContainer` The top-level component for your application
   - `AddAccountForm` Contains the form for creating new accounts
   - `AccountList` Lists all the bank accounts
-  - `Account` Lists the `number`, `name`, and `balance`
+  - `Account` Lists the `number`, `type`, `name`, and `balance`
     - A button that deposits $100 to the account
     - A button that withdraws $100 from the account
   
@@ -45,8 +45,10 @@ You will create a bank account applcation that will let you create bank accounts
   
 `AddAccountForm`
 - Contains the form for creating a new bank account
-  - `accountNumber` An input field for entering the name of the guest
-  - `accountName` An input field for entering the phone number of the guest
+  - `accountNumber` An input field for entering the account number for the new account
+  - `accountType` An input field for specifying checking or savings
+  - `accountName` An input field for entering the account 
+  - `accountBalance` An input field for specifying starting balance
   - A button for submisson of the data from the form
   - When the form is submitted, use the callback method reference from the parent component to update the parent component's state
 
@@ -55,7 +57,9 @@ You will create a bank account applcation that will let you create bank accounts
   - Should render an `Account` component for each account in the `BankAccountList` array passed down from the parent component
   
   `Account`
-    - Should list each name and phone number in the `GuestBookList` array passed down from the parent component
+    - Should list the `number`, `type`, `name`, and `balance`passed down from parent component and:
+      - A button that deposits $100 to the account
+      - A button that withdraws $100 from the account
   
 Layout
 - You *must* use CSS grid for this layout
